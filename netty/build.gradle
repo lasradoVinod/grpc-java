@@ -22,7 +22,7 @@ dependencies {
             libraries.guava,
             libraries.errorprone,
             libraries.perfmark
-
+    implementation libraries.sdt
     // Tests depend on base class defined by core module.
     testImplementation project(':grpc-core').sourceSets.test.output,
             project(':grpc-api').sourceSets.test.output,
@@ -33,6 +33,7 @@ dependencies {
             libraries.netty_epoll
     signature "org.codehaus.mojo.signature:java17:1.0@signature"
     alpnagent libraries.jetty_alpn_agent
+
 }
 
 import net.ltgt.gradle.errorprone.CheckSeverity

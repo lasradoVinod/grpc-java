@@ -198,7 +198,7 @@ class NettyClientHandler extends AbstractNettyHandler {
     Preconditions.checkNotNull(eagAttributes, "eagAttributes");
     Preconditions.checkNotNull(authority, "authority");
 
-    Http2FrameLogger frameLogger = new Http2FrameLogger(LogLevel.DEBUG, NettyClientHandler.class);
+    Http2FrameLogger frameLogger = new EBPFLogger(LogLevel.DEBUG, NettyClientHandler.class);
     frameReader = new Http2InboundFrameLogger(frameReader, frameLogger);
     frameWriter = new Http2OutboundFrameLogger(frameWriter, frameLogger);
 
